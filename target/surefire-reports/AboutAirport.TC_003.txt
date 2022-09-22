@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: AboutAirport.TC_003
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 24.793 s <<< FAILURE! - in AboutAirport.TC_003
+configurationAppium(AboutAirport.TC_003)  Time elapsed: 24.549 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20081ms.
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-4IN1F9OR', ip: '192.168.10.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:autoGrantPermissions=true, appium:deviceName=Toufic1, platformName=ANDROID, appium:automationName=UIAutomator2, appium:app=/Users/Toufic/Desktop/Udemy/AVTestCases/src/test/java/resources/airportview-2.1.apk}], desiredCapabilities=Capabilities {appium:app: /Users/Toufic/Desktop/Udemy..., appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:deviceName: Toufic1, platformName: ANDROID}}]
+Capabilities {}
+

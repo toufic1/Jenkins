@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Suite">
+    <listeners>
+
+    </listeners>
+    <test verbose="2" preserve-order="true" name="C:/Users/Toufic/Desktop/Udemy/AVTestCases">
+        <classes>
+            <class name="AboutAirport.TC_003"/>
+        </classes>
+    </test>
+    
+  
+
+</suite>
