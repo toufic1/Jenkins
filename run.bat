@@ -1,1 +1,1 @@
-mvn test -Dtest=TC_005
+mvn test 
