@@ -1,14 +1,13 @@
 pipeline {
-    agent {docker {image 'appium/appium'}}
-
+    
 
     stages {
-         stage('Before') {
+         stage('Get Code From GitHub') {
             steps {
               git 'https://github.com/toufic1/Jenkins.git'
             }
         }
-        stage('After') {
+        stage('Run Test') {
             steps {
                bat 'run.bat'
             }
