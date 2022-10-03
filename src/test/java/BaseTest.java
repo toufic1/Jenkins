@@ -1,5 +1,3 @@
-package Base;
-
 import AVBase.FirstPage;
 import AVBase.InitialPage;
 
