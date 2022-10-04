@@ -1,40 +1,3 @@
-<!DOCTYPE project [
-        <!ELEMENT project (modelVersion|groupId|artifactId|version|packaging|name|url|properties|build|dependencies|profiles)*>
-        <!ATTLIST project
-                xmlns CDATA #REQUIRED
-                xmlns:xsi CDATA #REQUIRED
-                xsi:schemaLocation CDATA #REQUIRED>
-        <!ELEMENT modelVersion (#PCDATA)>
-        <!ELEMENT groupId (#PCDATA)>
-        <!ELEMENT artifactId (#PCDATA)>
-        <!ELEMENT version (#PCDATA)>
-        <!ELEMENT packaging (#PCDATA)>
-        <!ELEMENT name (#PCDATA)>
-        <!ELEMENT url (#PCDATA)>
-        <!ELEMENT properties (jenkins-test-harness.version|project.build.sourceEncoding|aspectj.version|maven.compiler.source|maven.compiler.target|property)*>
-        <!ELEMENT jenkins-test-harness.version (#PCDATA)>
-        <!ELEMENT project.build.sourceEncoding (#PCDATA)>
-        <!ELEMENT aspectj.version (#PCDATA)>
-        <!ELEMENT maven.compiler.source (#PCDATA)>
-        <!ELEMENT maven.compiler.target (#PCDATA)>
-        <!ELEMENT build (plugins|pluginManagement)*>
-        <!ELEMENT plugins (plugin)*>
-        <!ELEMENT plugin (groupId|artifactId|version|configuration|dependencies)*>
-        <!ELEMENT configuration (testFailureIgnore|argLine|properties|suiteXmlFiles)*>
-        <!ELEMENT testFailureIgnore (#PCDATA)>
-        <!ELEMENT argLine (#PCDATA)>
-        <!ELEMENT property (name|value)*>
-        <!ELEMENT value (#PCDATA)>
-        <!ELEMENT dependencies (dependency)*>
-        <!ELEMENT dependency (groupId|artifactId|version|scope)*>
-        <!ELEMENT scope (#PCDATA)>
-        <!ELEMENT profiles (profile)*>
-        <!ELEMENT profile (id|build)*>
-        <!ELEMENT id (#PCDATA)>
-        <!ELEMENT pluginManagement (plugins)*>
-        <!ELEMENT suiteXmlFiles (suiteXmlFile)*>
-        <!ELEMENT suiteXmlFile (#PCDATA)>
-        ]>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -175,46 +138,26 @@
 
   </dependencies>
   <profiles>
+   
     <profile>
-      <id>Regression</id>
-      <build>
-        <pluginManagement>
-          <plugins>
+    <build>
+    <pluginManagement>
+        <plugins>
             <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-surefire-plugin</artifactId>
-              <version>3.0.0-M7</version>
-              <configuration>
-                <suiteXmlFiles>
-                  <suiteXmlFile>testng.xml</suiteXmlFile>
-                </suiteXmlFiles>
-              </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>
+                            testng.xml
+                        </suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
             </plugin>
-
-          </plugins>
-        </pluginManagement>
-      </build>
-    </profile>
-    <profile>
-      <id>Regression</id>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-surefire-plugin</artifactId>
-              <version>2.22.2</version>
-              <configuration>
-                <suiteXmlFiles>
-                  <suiteXmlFile>
-                    testng.xml
-                  </suiteXmlFile>
-                </suiteXmlFiles>
-              </configuration>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
+        </plugins>
+    </pluginManagement>
+</build>
     </profile>
 
   </profiles>
